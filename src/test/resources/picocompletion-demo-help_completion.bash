@@ -168,7 +168,8 @@ function _picocli_picocompletion-demo-help() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -202,7 +203,8 @@ function _picocli_picocompletion-demo-help_sub1() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -236,7 +238,8 @@ function _picocli_picocompletion-demo-help_sub1alias() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -329,7 +332,8 @@ function _picocli_picocompletion-demo-help_help() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -357,7 +361,8 @@ function _picocli_picocompletion-demo-help_sub2_subsub1() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -385,7 +390,8 @@ function _picocli_picocompletion-demo-help_sub2_sub2child1alias() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -547,7 +553,8 @@ function _picocli_picocompletion-demo-help_sub2alias_subsub1() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
@@ -575,7 +582,8 @@ function _picocli_picocompletion-demo-help_sub2alias_sub2child1alias() {
     COMPREPLY=( $(compgen -W "${flag_opts} ${arg_opts}" -- "${curr_word}") )
   else
     local positionals=""
-    COMPREPLY=( $(compgen -W "${commands} ${positionals}" -- "${curr_word}") )
+    local IFS=$'\n'
+    COMPREPLY=( $(compgen -W "${commands}${IFS}${positionals}" -- "${curr_word}") )
   fi
 }
 
